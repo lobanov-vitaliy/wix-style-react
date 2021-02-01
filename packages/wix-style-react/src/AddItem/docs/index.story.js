@@ -97,12 +97,6 @@ export default {
           }),
 
           example({
-            title: 'Tooltip',
-            text: 'AddItem can have a tooltip',
-            source: examples.tooltip,
-          }),
-
-          example({
             title: 'Themes',
             text: themes,
             source: examples.themes,
