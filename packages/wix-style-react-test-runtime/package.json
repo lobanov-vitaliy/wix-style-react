@@ -8,6 +8,7 @@
     "email": "artemy@wix.com"
   },
   "scripts": {
+    "build": "#",
     "pretest": "NODE_ENV=production yoshi build",
     "test": "NODE_ENV=production yoshi test --jest && npm run test:testkit-types",
     "test:testkit-types": "tsc -p tsconfig.declarations.json",

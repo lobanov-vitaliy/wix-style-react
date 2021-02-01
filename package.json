@@ -5,7 +5,7 @@
   "experimentalMonorepoPublish": true,
   "scripts": {
     "postinstall": "lerna bootstrap --no-ci",
-    "build": "lerna run build --scope wix-style-react",
+    "build": "lerna run build",
     "test1:unit": "lerna run --scope wix-style-react test1:unit",
     "test2:visual": "lerna run --scope wix-style-react test2:visual",
     "test3:e2e": "lerna run --scope wix-style-react test3:e2e",
@@ -14,7 +14,7 @@
     "test6:sanity": "lerna run --scope wix-style-react test6:sanity",
     "test7:performance": "lerna run --scope wix-style-react test7:performance",
     "test8:chromatic": "lerna run --scope wix-style-react-test-runtime test",
-    "test9": "#",
+    "test9": "lerna run --scope wix-ui-tpa test",
     "test10": "#",
     "test11": "#",
     "test12": "#",
