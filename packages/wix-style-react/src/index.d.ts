@@ -548,6 +548,9 @@ export { default as BounceAnimation } from './BounceAnimation';
 export { default as TimeInputWip } from './TimeInputWip';
 export * from './TimeInputWip';
 
+export { default as PageSection } from './PageSection';
+export * from './PageSection';
+
 export * from './BounceAnimation';
 
 export * from './TrendIndicator';

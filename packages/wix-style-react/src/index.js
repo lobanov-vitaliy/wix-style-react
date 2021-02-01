@@ -216,3 +216,4 @@ export { default as SkeletonRectangle } from './SkeletonRectangle';
 export { default as SkeletonCircle } from './SkeletonCircle';
 export { default as SkeletonLine } from './SkeletonLine';
 export { default as TimeInputWip } from './TimeInputWip';
+export { default as PageSection } from './PageSection';
