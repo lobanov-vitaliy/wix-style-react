@@ -2,8 +2,15 @@ export const plain = `<AddItem>Add Item</AddItem>`;
 
 export const title = `
   <Layout gap={10} cols={2}>
-      <AddItem>Add Item</AddItem>
-      <AddItem tooltipContent="Add Item"></AddItem>
+    <AddItem>Add Item</AddItem>
+    <AddItem tooltipContent="Add Item"></AddItem>
+  </Layout>
+`;
+
+export const tooltip = `
+  <Layout gap={10} cols={1}>
+    <AddItem tooltipContent="Add Item">Add Item</AddItem>
+    <AddItem tooltipContent="Add Item"></AddItem>
   </Layout>;
 `;
 
