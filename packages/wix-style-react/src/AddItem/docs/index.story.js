@@ -97,6 +97,12 @@ export default {
           }),
 
           example({
+            title: 'Subtitle',
+            text: 'AddItem can have subtitle',
+            source: examples.subtitle,
+          }),
+
+          example({
             title: 'Themes',
             text: themes,
             source: examples.themes,
