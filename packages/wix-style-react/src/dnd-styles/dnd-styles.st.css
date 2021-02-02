@@ -34,7 +34,7 @@
    background-color: value(B40);
 }
 
-.withGridItemStrip:after {
+.withGridItemStrip::after {
   content: '';
   position: absolute;
   width: 6px;
@@ -44,7 +44,7 @@
   right: -12px;
 }
 
-.withGridItemStrip.withGridItemStripRight:after {
+.withGridItemStrip.withGridItemStripRight::after {
   right: 0;
   left: -12px;
 }
