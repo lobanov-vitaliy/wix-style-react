@@ -90,8 +90,6 @@ class AddItem extends Component {
     alignItems: 'center',
     showIcon: true,
     removePadding: false,
-    subtitle:
-      'This is where add item’s description goes. It supports multiple lines.',
   };
 
   _renderIcon = () => {
@@ -166,9 +164,11 @@ class AddItem extends Component {
           {this._renderText()}
         </div>
         {subtitle && (
-          <Text light secondary size="small">
-            {subtitle}
-          </Text>
+          <div className={st(classes.contentFooter, { size })}>
+            <Text light secondary size="small">
+              {subtitle}
+            </Text>
+          </div>
         )}
       </div>
     );
