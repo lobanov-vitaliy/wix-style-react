@@ -7,6 +7,13 @@ export const title = `
   </Layout>
 `;
 
+export const subtitle = `
+  <Layout gap={10} cols={1}>
+    <AddItem size="large" subtitle="Add Item subtitle">Add Item</AddItem>
+    <AddItem size="tiny" subtitle="Add Item subtitle">Add Item</AddItem>
+  </Layout>
+`;
+
 export const themes = `
 <Layout gap={10} cols={1}>
   <div style={{ height: '55px'}}>
