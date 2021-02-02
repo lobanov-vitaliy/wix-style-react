@@ -79,6 +79,9 @@ class AddItem extends Component {
 
     /** Identifies the element that labels the add item element */
     ariaLabelledby: PropTypes.string,
+
+    /** Subtitle of the component */
+    subtitle: PropTypes.string,
   };
 
   static defaultProps = {
@@ -87,6 +90,8 @@ class AddItem extends Component {
     alignItems: 'center',
     showIcon: true,
     removePadding: false,
+    subtitle:
+      'This is where add item’s description goes. It supports multiple lines.',
   };
 
   _renderIcon = () => {
@@ -138,7 +143,14 @@ class AddItem extends Component {
   };
 
   _renderContent = () => {
-    const { theme, alignItems, size, disabled, showIcon } = this.props;
+    const {
+      theme,
+      alignItems,
+      size,
+      disabled,
+      showIcon,
+      subtitle,
+    } = this.props;
 
     return (
       <div
@@ -149,8 +161,15 @@ class AddItem extends Component {
           disabled,
         })}
       >
-        {showIcon && this._renderIcon()}
-        {this._renderText()}
+        <div className={st(classes.contentBody, { size })}>
+          {showIcon && this._renderIcon()}
+          {this._renderText()}
+        </div>
+        {subtitle && (
+          <Text light secondary size="small">
+            {subtitle}
+          </Text>
+        )}
       </div>
     );
   };
