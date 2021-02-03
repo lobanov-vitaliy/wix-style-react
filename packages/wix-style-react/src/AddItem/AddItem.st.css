@@ -163,9 +163,9 @@
   -st-states: theme(enum(image)), alignItems(enum(center, right, left)), size(enum(tiny)), disabled;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  box-sizing: border-box;
   align-items: center;
+  box-sizing: border-box;
+  justify-content: center;
   width: 100%;
   height: 100%;
 }
