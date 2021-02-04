@@ -2,7 +2,7 @@
   -st-from: "../Foundation/stylable/colors.st.css";
   -st-named:
     THEME-COLOR-10, THEME-COLOR-20, THEME-COLOR-30, THEME-COLOR-40, THEME-COLOR-50,
-    D60, D70, D80,
+    D20, D60, D70, D80,
     D10-05, D10-30,
     F00,
 }
@@ -267,6 +267,14 @@
 
 .root:disabled .textContent:skin(standard) {
   color: value(D10-30);
+}
+
+.subtitle {
+  -st-extends: Text;
+}
+
+.subtitle:skin(standard) {
+  color: value(D20);
 }
 
 .tooltip {

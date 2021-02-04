@@ -165,7 +165,7 @@ class AddItem extends Component {
         </div>
         {subtitle && (
           <div className={st(classes.contentFooter, { size })}>
-            <Text light secondary size="small">
+            <Text className={classes.subtitle} size="small">
               {subtitle}
             </Text>
           </div>
