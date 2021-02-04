@@ -164,11 +164,9 @@ class AddItem extends Component {
           {this._renderText()}
         </div>
         {subtitle && (
-          <div className={st(classes.contentFooter, { size })}>
-            <Text className={classes.subtitle} size="small">
-              {subtitle}
-            </Text>
-          </div>
+          <Text className={st(classes.subtitle, { size })} size="small">
+            {subtitle}
+          </Text>
         )}
       </div>
     );
