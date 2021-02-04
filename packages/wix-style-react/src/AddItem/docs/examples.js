@@ -9,9 +9,13 @@ export const title = `
 
 export const subtitle = `
   <Layout gap={10} cols={1}>
-    <AddItem size="large" subtitle="Add Item subtitle">Add Item</AddItem>
-    <AddItem size="tiny" subtitle="Add Item subtitle">Add Item</AddItem>
-  </Layout>
+    <AddItem
+      size="large"
+      subtitle="You can upload jpeg, png and gif files up to 5 mb size"
+    >
+      Drag here to upload
+    </AddItem>
+  </Layout>;
 `;
 
 export const themes = `
