@@ -213,21 +213,6 @@
   flex-direction: row;
 }
 
-/* Content footer */
-
-.contentFooter {
-  -st-states: size(enum(tiny, small));
-  padding-top: 12px;
-}
-
-.contentFooter:size(tiny) {
-  padding-top: 6px;
-}
-
-.contentFooter:size(small) {
-  padding-top: 6px;
-}
-
 /* Text */
 
 .textWrapper {
@@ -271,6 +256,16 @@
 
 .subtitle {
   -st-extends: Text;
+  -st-states: size(enum(tiny, small));
+  padding-top: 12px;
+}
+
+.subtitle:size(tiny) {
+  padding-top: 6px;
+}
+
+.subtitle:size(small) {
+  padding-top: 6px;
 }
 
 .subtitle:skin(standard) {
