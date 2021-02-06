@@ -1,19 +1,57 @@
 import React from 'react';
 import { snap, story, visualize } from 'storybook-snapper';
 import PageSection from '../PageSection';
+import { RTLWrapper } from '../../../stories/utils/RTLWrapper';
+import { Button } from 'wix-style-react';
+import PageHeader from '../../PageHeader';
+
+const PageSectionContainer = ({ rtl = false, children }) => (
+  <div style={{ width: '700px', border: '1px solid' }}>
+    <RTLWrapper rtl={rtl}>{children}</RTLWrapper>
+  </div>
+);
 
 const commonProps = {
-  // use for repeated props across the tests (e.g. {buttonText: 'example'})
+  title: 'title',
 };
 
 const tests = [
   {
-    describe: 'sanity', // prop name (e.g. size)
+    describe: 'sanity',
     its: [
       {
-        it: 'default', // prop variation (e.g. small)
+        it: 'title',
+        props: {},
+      },
+      {
+        it: 'subtitle',
+        props: { subtitle: 'subtitle' },
+      },
+      {
+        it: 'actionsBar',
+        props: { actionsBar: <Button>Action</Button> },
+      },
+      {
+        it: 'showDivider',
+        props: { showDivider: true },
+      },
+    ],
+  },
+  {
+    describe: 'ellipsis',
+    its: [
+      {
+        it: 'title',
         props: {
-          // the simulation (e.g. {size: "small"})
+          title:
+            'PageSection title - very very long very very long very very long very very long very very long',
+        },
+      },
+      {
+        it: 'subtitle',
+        props: {
+          subtitle:
+            'PageSection subtitle - very very long very very long very very long very very long very very long very very long very very long very very long very very long very very long very very long very very long very very long',
         },
       },
     ],
@@ -25,7 +63,11 @@ export const runTests = () => {
     tests.forEach(({ describe, its }) => {
       story(describe, () => {
         its.map(({ it, props }) =>
-          snap(it, () => <PageSection {...commonProps} {...props} />),
+          snap(it, () => (
+            <PageSectionContainer>
+              <PageSection {...commonProps} {...props} />
+            </PageSectionContainer>
+          )),
         );
       });
     });

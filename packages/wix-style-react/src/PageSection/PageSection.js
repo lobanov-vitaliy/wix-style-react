@@ -27,7 +27,7 @@ class PageSection extends React.PureComponent {
               <Heading
                 appearance="H2"
                 dataHook={dataHooks.pageSectionTitle}
-                ellipsis={typeof title === 'string'}
+                ellipsis
               >
                 {title}
               </Heading>
@@ -35,7 +35,7 @@ class PageSection extends React.PureComponent {
             {subtitle && (
               <Text
                 weight="thin"
-                ellipsis={typeof subtitle === 'string'}
+                ellipsis
                 dataHook={dataHooks.pageSectionSubtitle}
               >
                 {subtitle}
@@ -62,9 +62,9 @@ PageSection.propTypes = {
   /** A css class to be applied to the component's root element */
   className: PropTypes.string,
   /** The main title text */
-  title: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+  title: PropTypes.string,
   /** The subtitle text */
-  subtitle: PropTypes.node,
+  subtitle: PropTypes.string,
   /** A placeholder for a component that can contain actions / anything else. It should be a React component that receives `minimized` and `hasBackgroundImage` props. */
   actionsBar: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
 
