@@ -12,7 +12,7 @@ import {
   api,
   testkit,
 } from 'wix-storybook-utils/Sections';
-
+import * as examples from './examples';
 import { storySettings } from '../test/storySettings';
 import allComponents from '../../../stories/utils/allComponents';
 
@@ -27,9 +27,7 @@ export default {
   component: PageSection,
   componentPath: '..',
 
-  componentProps: {
-    buttonText: 'Hello World!',
-  },
+  componentProps: {},
 
   exampleProps: {
     // Put here presets of props, for more info:
@@ -59,9 +57,24 @@ export default {
 
           example({
             title: 'Simple Usage',
-            text: 'A simple example with compact preview',
-            source:
-              '<PageSection title="tal" subtitle="tal-subtitle" showDivider actionsBar={<Button>Tal</Button>}/>',
+            source: examples.simpleUsage,
+          }),
+
+          example({
+            title: 'Ellipsis',
+            source: examples.ellipsis,
+          }),
+
+          example({
+            title: 'Divider',
+            text:
+              'In order to render a divider, set `showDivider` prop to true',
+            source: examples.divider,
+          }),
+
+          example({
+            title: 'Actions Bar',
+            source: examples.actionsBar,
           }),
         ],
       }),
