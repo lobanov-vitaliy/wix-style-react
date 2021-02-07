@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Heading from '../Heading';
 import Text from '../Text';
 import Divider from '../Divider';
-import Box from '../Box';
 import { st, classes } from './PageSection.st.css';
 import { dataHooks } from './constants';
 
@@ -47,7 +46,7 @@ class PageSection extends React.PureComponent {
               className={classes.actionsBar}
               data-hook={dataHooks.pageSectionActionsBar}
             >
-              {typeof actionsBar === 'function' ? actionsBar() : actionsBar}
+              {actionsBar}
             </div>
           )}
         </div>
@@ -68,9 +67,9 @@ PageSection.propTypes = {
   title: PropTypes.string,
   /** The subtitle text */
   subtitle: PropTypes.string,
-  /** A placeholder for a component that can contain actions / anything else. It should be a React component that receives `minimized` and `hasBackgroundImage` props. */
-  actionsBar: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
-
+  /** A placeholder for a component that can contain actions / anything else.*/
+  actionsBar: PropTypes.node,
+  /** Renders a divider */
   showDivider: PropTypes.bool,
 };
 

@@ -15,7 +15,10 @@ function pageSectionWithAllProps() {
     <PageSection
       dataHook="dataHook"
       className="className"
-      buttonText="buttonText"
+      title="title"
+      subtitle="subtitle"
+      actionsBar={<div/>}
+      showDivider
     />
   );
 }
