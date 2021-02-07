@@ -25,6 +25,8 @@
 }
 
 .actionsBar {
-  margin: auto;
+  margin-inline-start: auto;
+  margin-block-start: auto;
+  margin-block-end: auto;
   padding-inline-start: 30px;
 }
