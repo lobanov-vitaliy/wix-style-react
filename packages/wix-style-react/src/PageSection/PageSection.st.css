@@ -6,6 +6,10 @@
 .root {
   padding-block-start: 24px;
   padding-block-end: 12px ;
+  padding-inline-start: 48px;
+  padding-inline-end: 48px;
+  flex-direction: column;
+  display: flex;
 }
 
 .content {
@@ -15,4 +19,12 @@
 .titleColumn {
   display: flex;
   flex-direction: column;
+  /* Allow flex-child to shrink when there is a truncated descendant
+   See: https://css-tricks.com/flexbox-truncated-text/#article-header-id-3 */
+  min-width: 0;
+}
+
+.actionsBar {
+  margin: auto;
+  padding-inline-start: 30px;
 }

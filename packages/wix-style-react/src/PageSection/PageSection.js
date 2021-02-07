@@ -43,9 +43,12 @@ class PageSection extends React.PureComponent {
             )}
           </div>
           {actionsBar && (
-            <Box dataHook={dataHooks.pageSectionActionsBar}>
+            <div
+              className={classes.actionsBar}
+              data-hook={dataHooks.pageSectionActionsBar}
+            >
               {typeof actionsBar === 'function' ? actionsBar() : actionsBar}
-            </Box>
+            </div>
           )}
         </div>
         {showDivider && <Divider />}

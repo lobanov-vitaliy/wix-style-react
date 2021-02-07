@@ -17,7 +17,7 @@ const commonProps = {
 
 const tests = [
   {
-    describe: 'sanity',
+    describe: '',
     its: [
       {
         it: 'title',
@@ -35,21 +35,22 @@ const tests = [
         it: 'showDivider',
         props: { showDivider: true },
       },
-    ],
-  },
-  {
-    describe: 'ellipsis',
-    its: [
       {
-        it: 'title',
+        it: 'ellipsis',
         props: {
           title:
             'PageSection title - very very long very very long very very long very very long very very long',
+          subtitle:
+            'PageSection subtitle - very very long very very long very very long very very long very very long very very long very very long very very long very very long very very long very very long very very long very very long',
         },
       },
       {
-        it: 'subtitle',
+        it: 'all props',
         props: {
+          actionsBar: <Button>Action</Button>,
+          showDivider: true,
+          title:
+            'PageSection title - very very long very very long very very long very very long very very long',
           subtitle:
             'PageSection subtitle - very very long very very long very very long very very long very very long very very long very very long very very long very very long very very long very very long very very long very very long',
         },
