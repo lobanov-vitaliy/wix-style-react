@@ -108,7 +108,7 @@
   },
   "homepage": "https://github.com/wix/wix-style-react#readme",
   "devDependencies": {
-    "@applitools/eyes-storybook": "^3.16.0",
+    "@applitools/eyes-storybook": "^3.16.5",
     "@babel/cli": "^7.12.10",
     "@babel/core": "^7.12.10",
     "@babel/parser": "^7.12.11",
@@ -185,7 +185,7 @@
     "webpack-cli": "^3.3.12",
     "wix-storybook-utils": "^3.0.139",
     "wix-ui-framework": "^3.5.2",
-    "yoshi": "^4.87.0",
+    "yoshi": "^4.9.0",
     "yoshi-config": "^4.87.0",
     "yoshi-flow-library": "^4.87.0",
     "yoshi-helpers": "^4.87.0",
@@ -206,7 +206,7 @@
     "@babel/runtime": "^7.12.5",
     "@date-fns/upgrade": "^1.0.3",
     "@loadable/component": "^5.14.1",
-    "@stylable/dom-test-kit": "^3.11.13",
+    "@stylable/dom-test-kit": "^3.5.0",
     "@types/color": "^2.0.1",
     "bootstrap-sass": "^3.4.1",
     "chart.js": "^2.9.4",
@@ -223,7 +223,7 @@
     "gradient-parser": "^0.1.5",
     "hoist-non-react-methods": "^1.1.0",
     "howler": "^2.2.1",
-    "lodash": "4.17.19",
+    "lodash": "^4.17.19",
     "moment": "^2.29.1",
     "omit": "^1.0.1",
     "prop-types": "^15.7.2",
@@ -246,7 +246,7 @@
     "wix-ui-core": "^3.0.177",
     "wix-ui-icons-common": "^2.0.301",
     "wix-ui-test-utils": "^1.0.178",
-    "yoshi-stylable-dependencies": "^4.0.0"
+    "yoshi-stylable-dependencies": "^4.86.0"
   },
   "eslintConfig": {
     "extends": [
