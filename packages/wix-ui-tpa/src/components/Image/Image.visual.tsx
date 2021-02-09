@@ -60,9 +60,15 @@ visualize('Image', () => {
   stories.forEach(({ name, src, invalidSrc }) => {
     story(name, () => {
       snap('default', (done) => <ImageWithWrapper src={src} onLoad={done} />);
-      snap('with onError', (done) => <ImageWithWrapper src={invalidSrc} onError={done} />);
+      snap('with onError', (done) => (
+        <ImageWithWrapper src={invalidSrc} onError={done} />
+      ));
       snap('with blurry loading', (done) => (
-        <ImageWithWrapper src={src} loadingBehavior={LoadingBehaviorOptions.blur} onLoad={done} />
+        <ImageWithWrapper
+          src={src}
+          loadingBehavior={LoadingBehaviorOptions.blur}
+          onLoad={done}
+        />
       ));
 
       story('with dimensions', () => {
@@ -70,22 +76,44 @@ visualize('Image', () => {
           <ImageWithWrapper src={src} width={300} height={225} onLoad={done} />
         ));
         snap('as fixed width and aspectRatio', (done) => (
-          <ImageWithWrapper src={src} width={300} aspectRatio={1} onLoad={done} />
+          <ImageWithWrapper
+            src={src}
+            width={300}
+            aspectRatio={1}
+            onLoad={done}
+          />
         ));
         snap('as fixed height and aspectRatio', (done) => (
-          <ImageWithWrapper src={src} height={300} aspectRatio={1} onLoad={done} />
+          <ImageWithWrapper
+            src={src}
+            height={300}
+            aspectRatio={1}
+            onLoad={done}
+          />
         ));
       });
 
       story('with aspectRatio', () => {
         snap('as square', (done) => (
-          <ImageWithWrapper src={src} aspectRatio={AspectRatioPresets.square} onLoad={done} />
+          <ImageWithWrapper
+            src={src}
+            aspectRatio={AspectRatioPresets.square}
+            onLoad={done}
+          />
         ));
         snap('as cinema', (done) => (
-          <ImageWithWrapper src={src} aspectRatio={AspectRatioPresets.cinema} onLoad={done} />
+          <ImageWithWrapper
+            src={src}
+            aspectRatio={AspectRatioPresets.cinema}
+            onLoad={done}
+          />
         ));
         snap('as landscape', (done) => (
-          <ImageWithWrapper src={src} aspectRatio={AspectRatioPresets.landscape} onLoad={done} />
+          <ImageWithWrapper
+            src={src}
+            aspectRatio={AspectRatioPresets.landscape}
+            onLoad={done}
+          />
         ));
         snap('as custom number', (done) => (
           <ImageWithWrapper src={src} aspectRatio={1.5} onLoad={done} />
@@ -125,7 +153,7 @@ visualize('Image', () => {
             {Object.values(FocalPointPresets).map((focalPoint) => (
               <ImageWithWrapper
                 key={focalPoint}
-                src='11062b_e0a93eb2e95b4845a0f5d43b07b7e1e8~mv2.jpeg'
+                src="11062b_e0a93eb2e95b4845a0f5d43b07b7e1e8~mv2.jpeg"
                 width={400}
                 height={100}
                 resize={ResizeOptions.cover}
