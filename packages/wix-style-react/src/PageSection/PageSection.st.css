@@ -6,7 +6,6 @@
 .root {
   -st-states: showDivider;
   padding-block-start: 24px;
-
   padding-inline-start: 48px;
   padding-inline-end: 48px;
   flex-direction: column;

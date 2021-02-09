@@ -4,8 +4,8 @@ import PageSection from '../PageSection';
 import { RTLWrapper } from '../../../stories/utils/RTLWrapper';
 import { Button } from 'wix-style-react';
 
-const PageSectionContainer = ({ rtl = false, children }) => (
-  <div style={{ width: '700px' }}>
+const PageSectionContainer = ({ rtl = false, children, maxWidth = false }) => (
+  <div style={{ width: maxWidth ? '100%' : '700px' }}>
     <RTLWrapper rtl={rtl}>{children}</RTLWrapper>
   </div>
 );
@@ -78,3 +78,16 @@ export const runTests = () => {
     });
   });
 };
+
+visualize(PageSection.displayName, () =>
+  story('', () => {
+    snap('max width', () => (
+      <PageSectionContainer maxWidth>
+        <PageSection
+          title="PageSection title - very very long very very long very very long very very long very very long"
+          subtitle="PageSection subtitle - very very long very very long very very long very very long very very long very very long very very long very very long very very long very very long very very long very very long very very long"
+        />
+      </PageSectionContainer>
+    ));
+  }),
+);
