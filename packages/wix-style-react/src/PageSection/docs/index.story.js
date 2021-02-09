@@ -57,11 +57,15 @@ export default {
 
           example({
             title: 'Simple Usage',
+            text:
+              '`<PageSection/>` can render title, subtitle and actions bar.',
             source: examples.simpleUsage,
           }),
 
           example({
             title: 'Ellipsis',
+            text:
+              'Hidden text appears on hover in a tooltip when title or subtitle are too long.',
             source: examples.ellipsis,
           }),
 
@@ -70,11 +74,6 @@ export default {
             text:
               'In order to render a divider, set `showDivider` prop to true',
             source: examples.divider,
-          }),
-
-          example({
-            title: 'Actions Bar',
-            source: examples.actionsBar,
           }),
         ],
       }),

@@ -16,11 +16,6 @@ export const simpleUsage = `
 <PageSection
 title="Section Title"
 subtitle="I am a relatively long subtitle to fill this space"
+actionsBar={<TextButton prefixIcon={<Icons.Add/>}>Add Item</TextButton>}
 />
 `;
-
-export const actionsBar = `
-<PageSection
-    title="Section Title"
-    actionsBar={<TextButton prefixIcon={<Icons.Add/>}>Add Item</TextButton>}
-/>`;
