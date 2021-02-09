@@ -3,10 +3,9 @@ import { snap, story, visualize } from 'storybook-snapper';
 import PageSection from '../PageSection';
 import { RTLWrapper } from '../../../stories/utils/RTLWrapper';
 import { Button } from 'wix-style-react';
-import PageHeader from '../../PageHeader';
 
 const PageSectionContainer = ({ rtl = false, children }) => (
-  <div style={{ width: '700px', border: '1px solid' }}>
+  <div style={{ width: '700px' }}>
     <RTLWrapper rtl={rtl}>{children}</RTLWrapper>
   </div>
 );
@@ -65,9 +64,14 @@ export const runTests = () => {
       story(describe, () => {
         its.map(({ it, props }) =>
           snap(it, () => (
-            <PageSectionContainer>
-              <PageSection {...commonProps} {...props} />
-            </PageSectionContainer>
+            <div>
+              <PageSectionContainer>
+                <PageSection {...commonProps} {...props} />
+              </PageSectionContainer>
+              <PageSectionContainer rtl>
+                <PageSection {...commonProps} {...props} />
+              </PageSectionContainer>
+            </div>
           )),
         );
       });

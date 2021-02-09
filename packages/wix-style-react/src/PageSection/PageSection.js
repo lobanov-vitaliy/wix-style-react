@@ -19,7 +19,10 @@ class PageSection extends React.PureComponent {
     } = this.props;
 
     return (
-      <div className={st(classes.root, {}, className)} data-hook={dataHook}>
+      <div
+        className={st(classes.root, { showDivider }, className)}
+        data-hook={dataHook}
+      >
         <div className={classes.content}>
           <div className={classes.titleColumn}>
             {title && (
@@ -50,7 +53,7 @@ class PageSection extends React.PureComponent {
             </div>
           )}
         </div>
-        {showDivider && <Divider />}
+        {showDivider && <Divider className={classes.divider} />}
       </div>
     );
   }
