@@ -97,7 +97,7 @@
     MainBorderDisabledColor: --overridable;
     /*
         The button's border width
-        @default 1 px
+        @default 1px
     */
     MainBorderWidth: --overridable;
     /*
@@ -217,7 +217,7 @@
 .dropdown .dropdownBase {
     color: value(DefaultButtonTextColor) !important;
     border-color: value(DefaultButtonBorderColor) !important;
-    border-width: applyUnit(value(DefaultBorderWidth), px) !important;
+    border-width: value(DefaultBorderWidth) !important;
     background: value(DefaultBackgroundColor) !important;
     font: font(value(DefaultTextFont)) !important;
 }
@@ -272,8 +272,8 @@
 .dropdown:hover .dropdownBase::arrowIcon path,
 .root:mobile .dropdown .dropdownBase::arrowIcon path,
 .root:mobile .dropdown:hover .dropdownBase::arrowIcon path {
-    fill: currentColor;
-    stroke: none;
+    fill: currentColor !important;;
+    stroke: none !important;;
 }
 
 .dropdown::popoverContent {
