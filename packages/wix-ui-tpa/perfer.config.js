@@ -18,6 +18,8 @@ const files = {
     'ButtonPerfBasic.bundle.min.js': 9,
     'ButtonPerfExtended.bundle.min.js': 10,
     'CalendarCell.bundle.min.js': 5,
+    'CalendarCellPerfBasic.bundle.min.js': 1,
+    'CalendarCellPerfExtended.bundle.min.js': 1,
     'CalendarPopover.bundle.min.js': 11,
     'Card.bundle.min.js': 5,
     'Checkbox.bundle.min.js': 7,
