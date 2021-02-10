@@ -5,7 +5,7 @@ import { storyOfAllPermutations } from '../../../test/utils/visual/utils';
 const Story = props => <CheckToggle {...props} />;
 
 const options = {
-  props: ['checked', 'size', 'skin', 'disabled'],
+  props: ['checked', 'size', 'skin', 'disabled', 'animated'],
   skipUndefinedValue: true,
 };
 
