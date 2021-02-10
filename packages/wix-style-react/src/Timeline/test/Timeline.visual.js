@@ -82,6 +82,20 @@ const tests = [
           ],
         },
       },
+      {
+        it: 'custom margin bottom', // prop variation (e.g. small)
+        props: {
+          items: [
+            {
+              label: 'simple text',
+              marginBottom: '12px',
+            },
+            {
+              label: 'simple text',
+            },
+          ],
+        },
+      },
     ],
   },
 ];

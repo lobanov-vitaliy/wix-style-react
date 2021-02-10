@@ -45,6 +45,8 @@ Timeline.propTypes = {
       customPrefix: PropTypes.node,
       /** suffix text or element placed on the right */
       suffix: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
+      /** margin bottom of each item */
+      marginBottom: PropTypes.string,
     }),
   ).isRequired,
 };

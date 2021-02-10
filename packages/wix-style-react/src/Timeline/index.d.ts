@@ -5,6 +5,7 @@ export interface TimelineItem {
   labelAction?: React.ReactNode;
   customPrefix?: React.ReactNode;
   suffix?: React.ReactNode | string;
+  marginBottom?: string;
 }
 
 export interface TimelineProps {

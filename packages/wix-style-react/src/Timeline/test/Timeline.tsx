@@ -21,6 +21,7 @@ function timelineWithAllProps() {
           labelAction: <div>labelAction</div>,
           customPrefix: <div>customPrefix</div>,
           suffix: <div>suffix</div>,
+          marginBottom: "30px",
         }
       ]}
     />

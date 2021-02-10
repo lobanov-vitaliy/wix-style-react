@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FontUpgradeContext } from '../FontUpgrade/context';
 import Text from '../Text';
-import { classes, st } from './TimelineItem.st.css';
+import { classes, st, vars } from './TimelineItem.st.css';
 import { dataHooks } from './constants';
 
 import { isString } from '../utils/StringUtils';
@@ -32,7 +32,10 @@ class TimelineItem extends React.PureComponent {
                 )}
                 <div className={classes.line} />
               </div>
-              <div className={st(classes.label, { withSuffix: !!item.suffix })}>
+              <div
+                className={st(classes.label, { withSuffix: !!item.suffix })}
+                style={{ [vars.marginBottom]: item.marginBottom }}
+              >
                 {isString(item.label) ? (
                   <Text
                     dataHook={`${dataHooks.timelineLabel}-${idx}`}
@@ -99,6 +102,8 @@ TimelineItem.propTypes = {
     customPrefix: PropTypes.node,
     /** suffix text or element placed on the right */
     suffix: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
+    /** margin bottom of each item */
+    marginBottom: PropTypes.string,
   }).isRequired,
 };
 
