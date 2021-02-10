@@ -127,7 +127,14 @@ export class Image extends React.Component<ImageProps> {
             src={src}
             className={classes.image}
             {...(calculatedDimensions && {
-              nativeProps: { ...calculatedDimensions },
+              nativeProps: {
+                ...calculatedDimensions,
+                ...(focalPointCoordinates && {
+                  style: {
+                    objectPosition: `${focalPointCoordinates.x}% ${focalPointCoordinates.y}%`,
+                  },
+                }),
+              },
             })}
             onLoad={this._onLoad}
             {...imageProps}
