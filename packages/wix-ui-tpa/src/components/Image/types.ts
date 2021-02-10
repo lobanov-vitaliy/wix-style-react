@@ -17,7 +17,7 @@ export interface ImageProps extends TPAComponentProps {
   resize?: ResizeOptions;
   /** Specifies the proportional relationship between width and height */
   aspectRatio?: keyof typeof AspectRatioPresets | number;
-  /** Centers an area of the image by given coordinates of x and y in percentages */
+  /** Centers a point of the image by given coordinates of x and y in percentages */
   focalPoint?: Extract<keyof typeof FocalPointPresets, 'string'> | FocalPoint;
   /** Specifies wether the image adapts and scales relatively to the containing layout */
   fluid?: boolean;
