@@ -5,13 +5,13 @@ export interface TimelineItem {
   labelAction?: React.ReactNode;
   customPrefix?: React.ReactNode;
   suffix?: React.ReactNode | string;
-  marginBottom?: string;
 }
 
 export interface TimelineProps {
   className?: string;
   dataHook?: string;
   items: TimelineItem[];
+  gap?: string;
 }
 
 export default class Timeline extends React.PureComponent<TimelineProps> {}

@@ -8,7 +8,7 @@ import TimelineItem from './TimelineItem';
 /** A timeline is a display of a list of events */
 class Timeline extends React.PureComponent {
   render() {
-    const { dataHook, items, className } = this.props;
+    const { dataHook, items, className, gap } = this.props;
 
     return (
       <ol className={st(classes.root, className)} data-hook={dataHook}>
@@ -18,6 +18,7 @@ class Timeline extends React.PureComponent {
             item={item}
             idx={idx}
             dataHook={`${dataHooks.timelineListEvent}-${idx}`}
+            gap={gap}
           />
         ))}
       </ol>
@@ -34,6 +35,9 @@ Timeline.propTypes = {
   /** A css class to be applied to the component's root element */
   className: PropTypes.string,
 
+  /** The space that separates each item from the next one */
+  gap: PropTypes.string,
+
   /** timeline events items */
   items: PropTypes.arrayOf(
     PropTypes.shape({
@@ -45,8 +49,6 @@ Timeline.propTypes = {
       customPrefix: PropTypes.node,
       /** suffix text or element placed on the right */
       suffix: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
-      /** margin bottom of each item */
-      marginBottom: PropTypes.string,
     }),
   ).isRequired,
 };
