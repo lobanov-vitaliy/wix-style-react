@@ -142,7 +142,7 @@ visualize('Image', () => {
       });
 
       story('with focalPoint', () => {
-        snap('with preset', (done) => (
+        snap('as preset', (done) => (
           <div
             style={{
               display: 'grid',
@@ -150,9 +150,9 @@ visualize('Image', () => {
               gridTemplateRows: 'repeat(3, 150px)',
             }}
           >
-            {Object.values(FocalPointPresets).map((focalPoint) => (
+            {Object.values(FocalPointPresets).map((focalPoint, index) => (
               <ImageWithWrapper
-                key={focalPoint}
+                key={`${focalPoint.x}, ${focalPoint.y}`}
                 src={src}
                 width={200}
                 height={100}
