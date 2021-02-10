@@ -18,6 +18,11 @@
   -st-default: YearDropdown;
 }
 
+:import {
+  -st-from: "./IconButton/IconButton.st.css";
+  -st-default: IconButton;
+}
+
 .root {
   display: flex;
   align-items: center;
@@ -47,9 +52,8 @@
   -st-extends: YearDropdown;
 }
 
-.arrowIcon {
-  display: block;
-  cursor: pointer;
+.arrow {
+  -st-extends: IconButton;
 }
 
 .arrowLeft {
@@ -60,6 +64,11 @@
 .arrowRight {
   margin-left: auto;
   order: 3;
+}
+
+.arrowIcon {
+  display: block;
+  cursor: pointer;
 }
 
 :global([dir="rtl"]) .arrowIcon {

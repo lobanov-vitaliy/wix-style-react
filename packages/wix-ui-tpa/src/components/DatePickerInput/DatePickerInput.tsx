@@ -2,6 +2,7 @@ import * as React from 'react';
 import { TPAComponentProps } from '../../types';
 import { TPAComponentsConsumer } from '../TPAComponentsConfig';
 
+import { Locale as DateFnsLocale } from 'date-fns';
 import WSRDatePicker from 'wix-style-react/dist/src/DatePicker';
 import { AppendTo } from 'wix-ui-core/popover';
 import { TextField } from '../TextField/TextField';
@@ -30,7 +31,7 @@ export type LanguageType =
   | 'zh'
   | 'th'
   | 'cs';
-export type Locale = LanguageType | { distanceInWords?: {}; format?: {} };
+export type Locale = LanguageType | DateFnsLocale;
 export type FirstDayOfWeek = 0 | 1 | 2 | 3 | 4 | 5 | 6;
 export type popoverPlacementType = 'bottom-start' | 'bottom-end';
 

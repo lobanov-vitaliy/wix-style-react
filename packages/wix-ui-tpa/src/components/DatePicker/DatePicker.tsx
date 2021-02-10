@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { TPAComponentProps } from '../../types';
 
+import { Locale as DateFnsLocale } from 'date-fns';
 import WSRCalendar from 'wix-style-react/dist/src/Calendar';
 
 import { st, classes } from './DatePicker.st.css';
@@ -26,7 +27,7 @@ export type LanguageType =
   | 'zh'
   | 'th'
   | 'cs';
-export type Locale = LanguageType | { distanceInWords?: {}; format?: {} };
+export type Locale = LanguageType | DateFnsLocale;
 export type FirstDayOfWeek = 0 | 1 | 2 | 3 | 4 | 5 | 6;
 
 export interface dateIndicationProps {

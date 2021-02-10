@@ -97,7 +97,7 @@ const DatePickerHead = ({
   return (
     <div data-hook="datepicker-head" className={st(classes.root, className)}>
       <IconButton
-        className={classes.arrowLeft}
+        className={st(classes.arrow, classes.arrowLeft)}
         dataHook="datepicker-left-arrow"
         skin="light"
         ariaLabel={leftArrowAriaLabel}
@@ -107,7 +107,7 @@ const DatePickerHead = ({
         <ChevronLeftLarge className={classes.arrowIcon} />
       </IconButton>
       <IconButton
-        className={classes.arrowRight}
+        className={st(classes.arrow, classes.arrowLeft)}
         dataHook="datepicker-right-arrow"
         skin="light"
         ariaLabel={rightArrowAriaLabel}
