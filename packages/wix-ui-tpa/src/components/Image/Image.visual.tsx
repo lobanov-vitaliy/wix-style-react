@@ -146,15 +146,15 @@ visualize('Image', () => {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(3, 1fr)',
-              gridTemplateRows: 'repeat(3, 1fr)',
+              gridTemplateColumns: 'repeat(3, 250px)',
+              gridTemplateRows: 'repeat(3, 150px)',
             }}
           >
             {Object.values(FocalPointPresets).map((focalPoint) => (
               <ImageWithWrapper
                 key={focalPoint}
-                src="11062b_e0a93eb2e95b4845a0f5d43b07b7e1e8~mv2.jpeg"
-                width={400}
+                src={src}
+                width={200}
                 height={100}
                 resize={ResizeOptions.cover}
                 focalPoint={focalPoint}
