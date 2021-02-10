@@ -93,8 +93,8 @@ export const dateIndication = buildExample(
 );
 
 export const a11y = buildExample(
-    'new Date()',
-    `
+  'new Date()',
+  `
     <div style={{ width: '280px' }}>
           <DatePicker
               value={value}
