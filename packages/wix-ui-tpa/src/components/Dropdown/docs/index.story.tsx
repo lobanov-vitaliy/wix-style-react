@@ -152,7 +152,7 @@ export default {
                     label: 'Button border width',
                     wixParam: 'mainBorderWidth',
                     defaultNumber: 0,
-                    unit: 'px',
+                    unit: '',
                     min: 0,
                     max: 10,
                   },
