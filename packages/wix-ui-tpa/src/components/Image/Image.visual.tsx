@@ -164,14 +164,24 @@ visualize('Image', () => {
           </div>
         ));
         snap('as custom', (done) => (
-          <ImageWithWrapper
-            src={src}
-            width={300}
-            aspectRatio={AspectRatioPresets.square}
-            resize={ResizeOptions.cover}
-            focalPoint={{ x: 70, y: 20 }}
-            onLoad={done}
-          />
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <ImageWithWrapper
+              src={src}
+              width={300}
+              height={100}
+              resize={ResizeOptions.cover}
+              focalPoint={{ x: 0, y: 20 }}
+              onLoad={done}
+            />
+            <ImageWithWrapper
+              src={src}
+              width={50}
+              height={200}
+              resize={ResizeOptions.cover}
+              focalPoint={{ x: 30, y: 0 }}
+              onLoad={done}
+            />
+          </div>
         ));
       });
 
