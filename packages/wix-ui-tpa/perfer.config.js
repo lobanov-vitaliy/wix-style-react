@@ -8,6 +8,8 @@ const files = {
     'Autocomplete.bundle.min.js': 37,
     'Avatar.bundle.min.js': 16.1,
     'AvatarGroup.bundle.min.js': 19.5,
+    'AvatarGroupPerfBasic.bundle.min.js': 19.5,
+    'AvatarGroupPerfExtended.bundle.min.js': 19.5,
     'Badge.bundle.min.js': 3,
     'BadgePerfBasic.bundle.min.js': 3,
     'BadgePerfExtendedBad.bundle.min.js': 3.1,

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { AddItem } from '../';
 
-export const ActionsMenuLayoutPerfer = () => {
+export const AddItemPerfer = () => {
   return <AddItem>Add Item</AddItem>;
 };
