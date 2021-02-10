@@ -21,7 +21,8 @@ export const commonExampleProps = {
   ],
   focalPoint: [
     ...Object.keys(FocalPointPresets),
-    { label: 'example of custom number (120,120)', value: { x: 120, y: 120 } },
+    { label: 'custom point (20,0)', value: { x: 20, y: 0 } },
+    { label: 'custom point (0,70)', value: { x: 0, y: 70 } },
   ],
   hoverEffect: Object.keys(HoverEffectOptions),
   loadingBehavior: Object.keys(LoadingBehaviorOptions),
