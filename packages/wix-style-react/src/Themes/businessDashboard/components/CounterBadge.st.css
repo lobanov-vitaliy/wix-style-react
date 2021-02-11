@@ -12,6 +12,6 @@
   -st-extends: CounterBadge;
 }
 
-.root:skin(general) {
+.root:skin(general):dark {
   background-color: value(generalCounterBadgeBackgroundColor);
 }
